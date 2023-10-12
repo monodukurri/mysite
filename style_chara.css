@@ -9,7 +9,7 @@ body{
 }
 
 p{
-  /* background-color: aqua; */
+  background-color: aqua;
   margin: 0;
   padding: 0;
 }
@@ -23,34 +23,24 @@ ul, li{
 .contents{
   position: relative;
   text-align: center;
-  /* top: 600px; */
-  padding: 600px 0 0 0;
 }
 
 .container{
-  /* width: 1000px; */
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(255,255,255,0.8);
-  padding: 8px 0;
+  padding: 8px 0 1px;
 }
 
 .container img{
   padding: 0 16px;
-  /* border-right: 2px solid gray; */
-}
-
-.menu{
-  /* width: 70%; */
-  /* flex: 1; */
 }
 
 .menu ul{
   display: flex;
   justify-content: center;
   /* background-color: antiquewhite; */
-  /* gap: 16px; */
 }
 
 .menu ul li{
@@ -63,15 +53,13 @@ ul, li{
   border-left: 2px solid pink;
 }
 
-.banner{
-  margin-top: 16px;
+
+.chara_intr{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.banner ul{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
 
 #footer{
   /* position: relative; */
@@ -85,7 +73,7 @@ ul, li{
 
 /* 背景を設定 */
 .top_wp1{
-  background-image: url(tottorimap.png);
+  background-image: url(tottorishi_bg.jpg);
   width: 100%;
   height: 100%;
   position: absolute;
