@@ -9,6 +9,11 @@ body{
   background-image: url(./pic/bg02.jpg);
 }
 
+a{
+  text-decoration: none;
+  color: #000000;
+}
+
 p{
   /* background-color: aqua; */
   margin: 0;
