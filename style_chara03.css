@@ -82,28 +82,48 @@ ul, li{
 }
 
 .contents .bg01{
-  background-image: url(./pic/kurayoshishi_bg.jpg);
-  background-size: 100% auto;
+  background-image: url(./pic/yonagoshi_bg.jpg);
+  background-size: auto 100%;
 }
 
 .contents .bg02{
-  background-image: url(./pic/misasatyou_bg.jpg);
+  background-image: url(./pic/sakaiminatoshi_bg.jpg);
   background-size: auto 100%;
 }
 
 .contents .bg03{
-  background-image: url(./pic/yurihamatyou_bg.jpg);
-  background-size: 100% auto;
+  background-image: url(./pic/hieduson_bg.jpg);
+  background-size: auto 100%;
 }
 
 .contents .bg04{
-  background-image: url(./pic/kotouratyou_bg.jpg);
-  background-size: 100% auto;
+  background-image: url(./pic/daisentyou_bg.jpg);
+  background-size: auto 100%;
 }
 
 .contents .bg05{
-  background-image: url(./pic/hokueityou_bg.jpg);
+  background-image: url(./pic/nanbutyou_bg.jpg);
+  background-size: 100% auto;
+}
+
+.contents .bg06{
+  background-image: url(./pic/houkityou_bg.jpg);
   background-size: auto 100%;
+}
+
+.contents .bg07{
+  background-image: url(./pic/nitinantyou_bg.jpg);
+  background-size: 100% auto;
+}
+
+.contents .bg08{
+  background-image: url(./pic/hinotyou_bg.jpg);
+  background-size: auto 100%;
+}
+
+.contents .bg09{
+  background-image: url(./pic/kouhutyou_bg.jpg);
+  background-size: 100% auto;
 }
 
 .ditail{
