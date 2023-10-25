@@ -16,6 +16,10 @@ p, h1, h2{
   font-weight: normal;
 }
 
+img{
+  vertical-align:top;
+}
+
 a:hover{
   cursor: pointer;
   opacity: 0.7;
@@ -37,7 +41,8 @@ ul, li{
   justify-content: center;
   align-items: center;
   background-color: rgba(255,255,255,0.8);
-  padding: 8px 0 1px;
+  padding: 8px 0 8px;
+  margin-bottom: 48px;
 }
 
 .container img{
@@ -65,6 +70,15 @@ ul, li{
   color: #000000;
 }
 
+.icon img{
+  width: 128px;
+  height: 128px;
+  border: solid 6px #EF66B2;
+  border-radius: 12px;
+  /* margin: 8px; */
+  margin: 16px 8px 0;
+}
+
 .icon img:hover{
   /* cursor: pointer;
   opacity: 0.7; */
@@ -78,7 +92,9 @@ ul, li{
   align-items: center;
   width: 1000px;
   height: 600px;
-  margin: 0 auto;
+  margin: 64px auto;
+  border: solid 2px white;
+  border-radius: 32px;
 }
 
 .contents .bg01{
@@ -110,6 +126,10 @@ ul, li{
   border-radius: 16px;
   padding: 16px;
   width: 500px;
+}
+
+.chara_img{
+  border-radius: 16px;
 }
 
 .chara_intr h1{
