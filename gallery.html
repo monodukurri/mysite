@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>鳥取県ご当地キャラ01</title>
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+  <main class="contents">
+    <div class="container">
+      <a href="index.html">
+        <img src="./pic/logo01.png" width="250" height="100" alt="">
+      </a>
+      <div class="menu">
+        <ul>
+          <li>
+            <a href="intro.html">
+              <p>INTRODUCTION<br>本サイトについて</p>
+            </a>
+          </li>
+          <li>
+            <a href="chara01.html">
+              <p>CHARACTER<br>県東部</p>
+            </a>
+          </li>
+          <li>
+            <a href="chara06.html">
+              <p>CHARACTER<br>県中部</p>
+            </a>
+          </li>
+          <li>
+            <a href="chara11.html">
+              <p>CHARACTER<br>県西部</p>
+            </a>
+          </li>
+          <li>
+            <a href="gallery.html">
+              <p>GALLERY<br>画廊</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    
+    <ul class="gallery">
+      <li class="modal_open" data-modal-btn="modal01">
+        <div>
+          <img src="./pic/site_banner_1.png" alt="" height="190" width="340" >
+        </div>
+      </li>
+      <li class="modal_open" data-modal-btn="modal02">
+        <div>
+          <img src="./pic/site_banner_2.png" alt="" height="190" width="340" >
+        </div>
+      </li>
+      <li class="modal_open" data-modal-btn="modal03">
+        <div>
+          <img src="./pic/site_banner_3.png" alt="" height="190" width="340" >
+        </div>
+      </li>
+      <li class="modal_open" data-modal-btn="modal04">
+        <div>
+          <img src="./pic/site_banner_4.png" alt="" height="190" width="340" >
+        </div>
+      </li>
+      <li class="modal_open" data-modal-btn="modal05">
+        <div>
+          <img src="./pic/site_banner_5.png" alt="" height="190" width="340" >
+        </div>
+      </li>
+    </ul>
+
+
+    <!-- モーダルの背景 -->
+    <div class="modal_bg hidden modal_close"></div>
+      
+    <!-- モーダルのボタン -->
+    <div class="modal_btn_prev hidden"><img src="./pic/button_prev.png" class="btn_img"></div>
+    <div class="modal_btn_next hidden"><img src="./pic/button_next.png" class="btn_img"></div>
+
+
+    <!-- モーダル -->
+    <ul id="slide_box">
+      <li class="gallery_img hidden modal01" data-modal-btn="child01" id="child01">
+        <div>
+          <img src="./pic/site_banner_1.png" alt="">
+        </div>
+      </li>
+      <li class="gallery_img hidden modal02" data-modal-btn="child02" id="child02">
+        <div>
+          <img src="./pic/site_banner_2.png" alt="">
+        </div>
+      </li>
+      <li class="gallery_img hidden modal03" data-modal-btn="child03" id="child03">
+        <div>
+          <img src="./pic/site_banner_3.png" alt="">
+        </div>
+      </li>
+      <li class="gallery_img hidden modal04" data-modal-btn="child04" id="child04">
+        <div>
+          <img src="./pic/site_banner_4.png" alt="">
+        </div>
+      </li>
+      <li class="gallery_img hidden modal05" data-modal-btn="child05" id="child05">
+        <div>
+          <img src="./pic/site_banner_5.png" alt="">
+        </div>
+      </li>
+    </ul>
+
+
+
+  </main>
+
+  <footer id="footer">
+    <p>鳥取県ご当地キャラマップ制作委員会</p>
+  </footer>
+
+  <!-- 背景を設定するための空の項目。詳細はCSSで設定している。 -->
+  <div class="top_wp1"></div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/gallery.js"></script>
+
+</body>
+</html>
