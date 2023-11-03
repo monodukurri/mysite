@@ -6,6 +6,7 @@ body{
   /* 背景を透明にする */
   position: relative;
   overflow-x: hidden;
+  min-width: 400px;
 }
 
 p, h1, h2{
@@ -31,6 +32,11 @@ ul, li{
   padding: 0;
 }
 
+button{
+  background-color: transparent;
+  border: none;
+}
+
 .contents{
   position: relative;
   text-align: center;
@@ -51,6 +57,7 @@ ul, li{
 
 .menu ul{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   /* background-color: antiquewhite; */
 }
@@ -70,6 +77,64 @@ ul, li{
   color: #000000;
 }
 
+
+/* spメニューの設定 */
+.sp_container{
+  display: none;
+}
+
+.sp_header{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255,255,255,0.8);
+  padding: 8px 0 8px;
+  margin-bottom: 48px;
+}
+
+.sp_container a{
+  text-decoration: none;
+}
+
+.sp_menu{
+  display: none;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  /* bottom: 0; */
+  left: 0;
+  right: 0;
+  background-color: white;
+}
+
+.material-symbols-outlined {
+  font-size: 40px;
+  color: white;
+  background-color: black;
+  padding: 4px;
+}
+
+.sp_menu .sp_menu_close{
+  text-align: right;
+}
+
+.sp_menu li{
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: solid 1px black;
+}
+
+.sp_menu li:last-child{
+  border-bottom: none;
+}
+
+
+/* キャラコンテナ */
+.chara_container{
+  padding: 0 16px;
+}
+
+
+/* キャラアイコン */
 .icon img{
   width: 128px;
   height: 128px;
@@ -86,13 +151,18 @@ ul, li{
   transform: scale(1.1, 1.1);
 }
 
+
+/* キャラ紹介 */
 .chara_intr{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1000px;
-  height: 600px;
+  width: auto;
+  min-width: 400px;
+  max-width: 1000px;
+  height: auto;
   margin: 64px auto;
+  padding: 32px;
   border: solid 2px white;
   border-radius: 32px;
 }
@@ -126,11 +196,15 @@ ul, li{
   background-color: rgba(255,255,255,0.8);
   border-radius: 16px;
   padding: 16px;
-  width: 500px;
+  width: auto;
+  margin: 0 16px;
 }
 
 .chara_img{
   border-radius: 16px;
+  max-width: 100%;
+  height: auto;
+  margin-top: 12px;
 }
 
 .chara_intr h1{
@@ -139,7 +213,7 @@ ul, li{
 }
 
 .profile{
-  margin: 0 32px;
+  margin: 12px auto 0;
 }
 
 .profile a{
@@ -152,6 +226,8 @@ ul, li{
   /* 画像下の空白を消す */
   display: block;
   margin-left: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .reverse{
@@ -214,5 +290,30 @@ ul, li{
   /* スクロールしても背景を固定 */
   background-attachment: fixed;
   /* background-repeat: no-repeat; */
+}
+
+
+/* sp用の設定 */
+@media (max-width: 750px){
+  /* SP用メニューに切り替え */
+  .container{
+    display: none;
+  }
+
+  .sp_container{
+    display: block;
+  }
+
+  /* キャラ紹介を１カラムに切り替え */
+  .chara_container{
+    padding: 0 8px;
+  }
+
+  .chara_intr{
+    display: block;
+    /* margin: 64px 8px; */
+    padding: 0;
+  }
+
 }
 

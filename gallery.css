@@ -6,6 +6,7 @@ body{
   /* 背景を透明にする */
   position: relative;
   overflow-x: hidden;
+  min-width: 400px;
 }
 
 p, h1, h2{
@@ -21,6 +22,7 @@ img{
 }
 
 a:hover{
+  cursor: pointer;
   opacity: 0.7;
 }
 
@@ -50,6 +52,7 @@ ul, li{
 
 .menu ul{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   /* background-color: antiquewhite; */
 }
@@ -71,6 +74,57 @@ ul, li{
 
 
 
+/* spメニューの設定 */
+.sp_container{
+  display: none;
+}
+
+.sp_header{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255,255,255,0.8);
+  padding: 8px 0 8px;
+  margin-bottom: 48px;
+}
+
+.sp_container a{
+  text-decoration: none;
+}
+
+.sp_menu{
+  display: none;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+}
+
+.material-symbols-outlined {
+  font-size: 40px;
+  color: white;
+  background-color: black;
+  padding: 4px;
+}
+
+.sp_menu .sp_menu_close{
+  text-align: right;
+}
+
+.sp_menu li{
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: solid 1px black;
+}
+
+.sp_menu li:last-child{
+  border-bottom: none;
+}
+
+
+
+/* ギャラリーの設定 */
 .gallery{
   display: flex;
   flex-wrap: wrap;
@@ -100,26 +154,40 @@ ul, li{
 }
 
 .modal_img{
-  position: fixed;
+  /* position: fixed;
   z-index: 9;
-  top: calc(50% - 270px);
-  left: calc(50% - 510px) ;
+  width: 90%;
+  min-width: 340px;
+  top: 0;
+  left: 0;
+  margin: 5%;
+  height: auto; */
+  /* top: calc(50% - 270px); */
+  /* left: calc(50% - 510px) ; */
   /* top: calc(50% - 190px / 2); */
 }
 
 #slide_box img{
   position: fixed;
-  z-index: 9;
-  top: calc(50% - 190px);
-  left: calc(50% - 340px) ;
+  z-index: 5;
+  width: 86%;
+  min-width: 340px;
+  /* top: 0; */
+  /* left: 0; */
+  /* margin: 7%; */
+  /* height: auto; */
+  inset: 0;
+  margin: auto;
+  /* top: calc(50% - 190px); */
+  /* left: calc(50% - 340px) ; */
 }
 
 /* 次の画像に進むボタンの設定 */
 .modal_btn_prev{
   position: fixed;
+  z-index: 9;
   top: calc(50% - 45px);
   left: 0;
-  z-index: 9;
 }
 
 .modal_btn_next{
@@ -130,7 +198,7 @@ ul, li{
 }
 
 .btn_img{
-  width: 60px;
+  width: 48px;
   padding: 16px;
 }
 
@@ -177,3 +245,17 @@ ul, li{
   /* background-repeat: no-repeat; */
 }
 
+
+
+/* sp用の設定 */
+@media (max-width: 750px){
+  /* SP用メニューに切り替え */
+  .container{
+    display: none;
+  }
+
+  .sp_container{
+    display: block;
+  }
+
+}

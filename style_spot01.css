@@ -6,6 +6,7 @@ body{
   /* 背景を透明にする */
   position: relative;
   overflow-x: hidden;
+  min-width: 400px;
 }
 
 p, h1, h2{
@@ -21,6 +22,7 @@ img{
 }
 
 a:hover{
+  cursor: pointer;
   opacity: 0.7;
 }
 
@@ -48,8 +50,11 @@ ul, li{
   padding: 0 16px;
 }
 
+
+
 .menu ul{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   /* background-color: antiquewhite; */
 }
@@ -69,8 +74,68 @@ ul, li{
   color: #000000;
 }
 
+
+
+/* spメニューの設定 */
+.sp_container{
+  display: none;
+}
+
+.sp_header{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255,255,255,0.8);
+  padding: 8px 0 8px;
+  margin-bottom: 48px;
+}
+
+.sp_container a{
+  text-decoration: none;
+}
+
+.sp_menu{
+  display: none;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+}
+
+.material-symbols-outlined {
+  font-size: 40px;
+  color: white;
+  background-color: black;
+  padding: 4px;
+}
+
+.sp_menu .sp_menu_close{
+  text-align: right;
+}
+
+.sp_menu li{
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: solid 1px black;
+}
+
+.sp_menu li:last-child{
+  border-bottom: none;
+}
+
+
+/* スポットコンテナ */
+.spot_container{
+  padding: 0 16px;
+}
+
+
+/* スポットの設定 */
 .spot{
-  width: 1000px;
+  width: auto;
+  max-width: 1000px;
+  min-width: 400px;
   margin: 0 auto 64px;
   background-image: url(./pic/spot_bg.jpg);
   /* background-repeat: repeat;
@@ -113,6 +178,7 @@ ul, li{
   text-align: left;
 }
 
+
 .modal_open:hover{
   opacity: 0.7;
   transition: all 0.6s ease 0s;
@@ -121,14 +187,15 @@ ul, li{
 
 
 /* 画像の右側に余白を作る（＝文字との間を空ける）。reverseがついてる要素ごとまとめて設定 */
-.spot_gazou img{
-  margin: 0 24px 0 0;
+.spot_text{
+  padding: 0 0 0 24px;
 }
 
 /* 画像の左側に余白を作る。reverseがついてる要素にのみ設定。上記設定を上書きするためにrightに0を設定している。 */
-.reverse img{
-  margin: 0 0 0 24px;
+.reverse .spot_text{
+  padding: 0 24px 0 0;
 }
+
 
 .reverse{
   flex-direction: row-reverse;
@@ -144,9 +211,17 @@ ul, li{
 .modal_img{
   position: fixed;
   z-index: 9;
-  top: calc(50% - 270px);
-  left: calc(50% - 510px) ;
-  /* top: calc(50% - 190px / 2); */
+  width: 90%;
+  min-width: 300px;
+  /* height: 100%; */
+  /* top: 0; */
+  /* bottom: 0; */
+  /* left: 0; */
+  /* right: 0; */
+  inset: 0;
+  margin: auto;
+  /* margin: 5%; */
+  /* height: auto; */
 }
 
 .modal_bg{
@@ -185,4 +260,41 @@ ul, li{
   background-attachment: fixed;
   /* background-repeat: no-repeat; */
 }
+
+
+
+
+/* sp用の設定 */
+@media (max-width: 750px){
+  /* SP用メニューに切り替え */
+  .container{
+    display: none;
+  }
+
+  .sp_container{
+    display: block;
+  }
+
+  /* スポットを１カラムに切り替え */
+  .spot_container{
+    padding: 0 8px;
+  }
+
+  .spot_gazou{
+    display: block;
+    margin: 0 16px;
+  }
+
+  .spot_text{
+    padding: 16px 0;
+  }
+
+  .reverse .spot_text{
+    padding: 16px 0;
+  }
+
+
+
+}
+
 
