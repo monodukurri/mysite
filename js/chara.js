@@ -158,4 +158,19 @@ $(function ($) {
 
 
 
+// メニューボタンクリックでspメニューを表示する。モーダルウィンドウを転用。
+$(function(){
+  $('.sp_menu_open').on('click', function(){
+    $('.sp_menu').fadeIn();
+  });
+
+  // モーダルを非表示にする。
+  $('.sp_menu_close').on('click' , function(){
+    $('.sp_menu').fadeOut();
+    // $('.modal_bg').fadeOut();
+  });
+  
+});
+
+
 
