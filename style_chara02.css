@@ -169,7 +169,7 @@ button{
 
 .contents .bg01{
   background-image: url(./pic/kurayoshishi_bg.jpg);
-  background-size: 100% auto;
+  background-size: auto 100%;
 }
 
 .contents .bg02{
@@ -179,12 +179,12 @@ button{
 
 .contents .bg03{
   background-image: url(./pic/yurihamatyou_bg.jpg);
-  background-size: 100% auto;
+  background-size: auto 100%;
 }
 
 .contents .bg04{
   background-image: url(./pic/kotouratyou_bg.jpg);
-  background-size: 100% auto;
+  background-size: auto 100%;
 }
 
 .contents .bg05{

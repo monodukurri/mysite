@@ -190,7 +190,7 @@ button{
 
 .contents .bg05{
   background-image: url(./pic/nanbutyou_bg.jpg);
-  background-size: 100% auto;
+  background-size: auto 100%;
 }
 
 .contents .bg06{
@@ -200,7 +200,7 @@ button{
 
 .contents .bg07{
   background-image: url(./pic/nitinantyou_bg.jpg);
-  background-size: 100% auto;
+  background-size: auto 100%;
 }
 
 .contents .bg08{
@@ -210,7 +210,7 @@ button{
 
 .contents .bg09{
   background-image: url(./pic/kouhutyou_bg.jpg);
-  background-size: 100% auto;
+  background-size: auto 100%;
 }
 
 .ditail{
