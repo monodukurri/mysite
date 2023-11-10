@@ -167,6 +167,10 @@ button{
   text-align: center;
 }
 
+.hidden{
+  display: none;
+}
+
 
 /* 背景を設定 */
 .top_wp1{
